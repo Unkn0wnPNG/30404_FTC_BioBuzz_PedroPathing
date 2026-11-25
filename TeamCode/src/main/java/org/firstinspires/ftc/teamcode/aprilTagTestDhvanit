@@ -19,6 +19,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SO
 package org.firstinspires.ftc.teamcode;
 
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
+import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import org.firstinspires.ftc.vision.apriltag.AprilTagDetection;
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
@@ -39,7 +40,7 @@ import com.qualcomm.robotcore.util.ElapsedTime;
  */
 @Autonomous
 
-public class aprilTagTestDhvanit extends LinearOpMode {
+public class aprilTagTestDhvanit extends OpMode {
     aprilTagClass aprilTagClass = new aprilTagClass();
     
     @Override
@@ -50,7 +51,6 @@ public class aprilTagTestDhvanit extends LinearOpMode {
     @Override
     public void loop(){
         aprilTagClass.update();
-        AprilTagDetection id20 = aprilTagClass.getTagBySpecificId(20);
-        aprilTagClass.displayDetectionTelemetry(id20);
+        aprilTagClass.displayDetectionTelemetry();
     }
 }
